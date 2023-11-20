@@ -5,7 +5,7 @@ caching samples
 
 #1
 
-Distributed sql server caching ni implement qilishda sql server da baza a table yaratib qo'yish kerak
+```Distributed sql server caching``` ni implement qilishda sql server da baza a table yaratib qo'yish kerak
 ```sql
 SET ANSI_NULLS ON
 GO
@@ -34,4 +34,4 @@ GO
 
 #2
 
-Distributed Redis caching ni implement qilishda Redis ni o'rnatib ```start``` qilib yuborish kerak
+```Distributed Redis caching``` ni implement qilishda Redis ni o'rnatib ```start``` qilib yuborish kerak
