@@ -14,7 +14,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TABLE [dbo].[*****](
+CREATE TABLE [dbo].[ ** ** ](
   [Id] [nvarchar](449) NOT NULL,
   [Value] [varbinary](max) NOT NULL,
   [ExpiresAtTime] [datetimeoffset](7) NOT NULL,
