@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Distributed;
+using System.Text.Json;
 
 namespace DistributedRedisCache.Controllers
 {
@@ -12,22 +14,44 @@ namespace DistributedRedisCache.Controllers
     };
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly IDistributedCache _distributedCache;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(
+            ILogger<WeatherForecastController> logger, 
+            IDistributedCache distributedCache)
         {
             _logger = logger;
+            _distributedCache = distributedCache;
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
-        public IEnumerable<WeatherForecast> Get()
+        public async Task<IEnumerable<WeatherForecast>> Get()
         {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            var cache = await _distributedCache.GetStringAsync("key");
+
+            if(cache == null)
             {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+                var value = Enumerable.Range(1, 5).Select(index => new WeatherForecast
+                    {
+                        Date = DateTime.Now.AddDays(index),
+                        TemperatureC = Random.Shared.Next(-20, 55),
+                        Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+                    })
+                    .ToArray();
+
+                await _distributedCache.SetStringAsync(
+                    key: "key",
+                    value: JsonSerializer.Serialize(value),
+                    options:new DistributedCacheEntryOptions()
+                    {
+                        SlidingExpiration = TimeSpan.FromSeconds(30),
+                        AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(10)
+                    });
+
+                return value;
+            }
+
+            return JsonSerializer.Deserialize<WeatherForecast[]>(cache);
         }
     }
 }
