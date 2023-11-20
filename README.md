@@ -3,10 +3,7 @@ caching samples
 
 # Eslatmalar
 
-# 1 
-```
-Distributed sql server caching
-```
+# 1 Distributed sql server caching
 
 Distributed sql server caching ni implement qilishda sql server da baza a table yaratib qo'yish kerak
 
@@ -17,7 +14,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TABLE [dbo].[<Table name>](
+CREATE TABLE [dbo].[*****](
   [Id] [nvarchar](449) NOT NULL,
   [Value] [varbinary](max) NOT NULL,
   [ExpiresAtTime] [datetimeoffset](7) NOT NULL,
@@ -36,10 +33,7 @@ GO
 
 ```
 
-# 2
-```
-Distributed Redis caching
-```
+# 2 Distributed Redis caching
 
 Distributed Redis caching ni implement qilishda Redis ni o'rnatib ```start``` qilib yuborish kerak
 
