@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DistributedCache", "Distrib
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistributedMemoryCache", "DistributedCache\DistributedMemoryCache\DistributedMemoryCache.csproj", "{0E013507-7161-4238-A78E-2E53B3475A73}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistributedSqlServerCache", "DistributedCache\DistributedSqlServerCache\DistributedSqlServerCache.csproj", "{03EF212C-3BF4-44AA-8F8D-673F70E54A8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +25,17 @@ Global
 		{0E013507-7161-4238-A78E-2E53B3475A73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E013507-7161-4238-A78E-2E53B3475A73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E013507-7161-4238-A78E-2E53B3475A73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03EF212C-3BF4-44AA-8F8D-673F70E54A8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03EF212C-3BF4-44AA-8F8D-673F70E54A8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03EF212C-3BF4-44AA-8F8D-673F70E54A8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03EF212C-3BF4-44AA-8F8D-673F70E54A8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0E013507-7161-4238-A78E-2E53B3475A73} = {5C5721EF-B22B-4240-BD3D-83601E922179}
+		{03EF212C-3BF4-44AA-8F8D-673F70E54A8D} = {5C5721EF-B22B-4240-BD3D-83601E922179}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B28B9C68-636E-40F5-BA6B-817B7D1787D5}

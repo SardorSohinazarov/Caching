@@ -35,6 +35,7 @@ namespace DistributedMemoryCache.Controllers
                         TemperatureC = Random.Shared.Next(-20, 55),
                         Summary = Summaries[Random.Shared.Next(Summaries.Length)]
                     }).ToArray();
+
                 await _distributedCache.SetStringAsync(
                     key: "key",
                     value:JsonSerializer.Serialize(value),
