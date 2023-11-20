@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InMemoryCaching", "InMemoryCaching\InMemoryCaching.csproj", "{6C360680-508E-4EFD-ABCE-4DC2D763E595}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InMemoryCaching", "InMemoryCaching\InMemoryCaching.csproj", "{6C360680-508E-4EFD-ABCE-4DC2D763E595}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DistributedCache", "DistributedCache", "{5C5721EF-B22B-4240-BD3D-83601E922179}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistributedMemoryCache", "DistributedCache\DistributedMemoryCache\DistributedMemoryCache.csproj", "{0E013507-7161-4238-A78E-2E53B3475A73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistributedMemoryCache", "DistributedCache\DistributedMemoryCache\DistributedMemoryCache.csproj", "{0E013507-7161-4238-A78E-2E53B3475A73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistributedSqlServerCache", "DistributedCache\DistributedSqlServerCache\DistributedSqlServerCache.csproj", "{03EF212C-3BF4-44AA-8F8D-673F70E54A8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistributedSqlServerCache", "DistributedCache\DistributedSqlServerCache\DistributedSqlServerCache.csproj", "{03EF212C-3BF4-44AA-8F8D-673F70E54A8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
