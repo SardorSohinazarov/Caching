@@ -1,9 +1,9 @@
 # Caching
 caching samples
 
-###Eslatmalar
+# Eslatmalar
 
-#1 
+# 1 
 ```
 Distributed sql server caching
 ```
@@ -36,9 +36,11 @@ GO
 
 ```
 
-#2
+# 2
 ```
 Distributed Redis caching
 ```
 
 Distributed Redis caching ni implement qilishda Redis ni o'rnatib ```start``` qilib yuborish kerak
+
+
