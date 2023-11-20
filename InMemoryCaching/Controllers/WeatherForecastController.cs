@@ -31,11 +31,17 @@ namespace InMemoryCaching.Controllers
                 _memoryCache.Set(
                     key:"key",
                     value:Enumerable.Range(1, 5).Select(index => new WeatherForecast
-                    {
-                        Date = DateTime.Now.AddDays(index),
-                        TemperatureC = Random.Shared.Next(-20, 55),
-                        Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-                    }).ToArray()
+                        {
+                            Date = DateTime.Now.AddDays(index),
+                            TemperatureC = Random.Shared.Next(-20, 55),
+                            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+                        }).ToArray(),
+                    options:new MemoryCacheEntryOptions() 
+                        { 
+                            SlidingExpiration = TimeSpan.FromSeconds(5),
+                            AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(20),
+                            Size = 1024
+                        }
                 );
             }
 
